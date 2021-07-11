@@ -1,0 +1,32 @@
+.modal-wrapper{
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: rgb(4,9,17,.8);
+    top: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.modal input{
+    margin-top : 10px;
+}
+.modal{
+    padding-top: 20px;
+    margin: auto;
+    width: 500px;
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    height: 200px;
+    border: 1px solid #ccc;
+}
+.show{
+    transition:0.7s;
+    visibility: visible;
+    transform: translateX(0);
+    opacity:1;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <script src="scripts/modal.js"></script>
+
+    <title>Task List</title>
+</head>
+<body>
+    <main>
+        <div class="tarefas">
+            <h2>Task Manager</h2>
+            <hr width="100%">
+            <div class="tasks-box">
+                <div class="to-do task">
+                    <h2>To-do</h2> <span id="addTask"><a  onClick="showModal('.modal-wrapper',event)" href="">Add Task</a></span>
+                    <% for(let i = 0;i < tarefasList.length;i++){%> 
+                        <p> <%=tarefasList[i] %>  | <a href="/deletar/<%= i %>">X </a> || <a href="/progress/<%= i %> ">V </a> </p>
+                    <% } %> 
+                </div>
+                <div class="progress task">
+                    <h2>In-Progress</h2>
+                    <% for(let i = 0;i < tarefasProgress.length;i++){%> 
+                        <p> <%=tarefasProgress[i] %> | <a href="/completed/<%= i %> ">V </a> | <a href="/comeBack/<%= i %> "> < </a> </p>
+                    <% } %> 
+    
+                
+                </div>
+                <div class="completed task">
+                    <h2>Completed</h2>
+                    <% for(let i = 0;i < tarefasCompleted.length;i++){%> 
+                        <p> <%=tarefasCompleted[i] %> | <a href="/deleteCompleted/<%= i %> ">X </a> </p>
+                    <% } %> 
+                </div>
+
+            </div>
+           
+        </div>
+        <div class="modal-wrapper">
+            <div class="modal">
+                <form  method="POST">
+                    <h2>Add New Task</h2>
+                    <div class="input-group">
+                        <label> Task </label>
+                        <input required type="text" name="task">
+                    </div>
+                
+                    <input type="submit" value="Add Task"/>
+                </form>
+            </div>
+            
+        </div>
+    </main>
+    
+</body>
+</html>

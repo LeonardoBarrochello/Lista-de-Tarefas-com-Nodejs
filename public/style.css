@@ -1,0 +1,60 @@
+
+
+body{
+    font-family: 'Yomogi', cursive; 
+}
+
+
+#addTask:hover{
+    filter: brightness(90%);
+}
+#addTask{
+    cursor: pointer;
+    text-align: center;
+    width: 100px;
+    border-radius: 5px;
+    background: blue;
+    
+    
+}
+#addTask a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+
+}
+
+
+.tasks-box{
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarefas > h2{
+    text-align: center;
+}
+
+.tarefas {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 500px;
+    border: 2px solid #25A4;
+    border-radius:5px;
+    margin:0 auto;
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 2px solid #000;
+    margin: 0 30px;
+    width: 250px;
+    height: 200px;
+    
+}
+.task:nth-of-type(3){
+    border: 0;
+}
